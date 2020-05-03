@@ -1,15 +1,16 @@
-const VideoStream = require("videostream");
+fetch("http://localhost:4000/video").then((response) => {
+  response.json().then((stat) => console.log(stat));
+});
 
 const exampleFile = {
-  createReadStream(opts) {
-    const { start, end } = opts;
+  createReadStream(stat) {
+    const { start, end } = stat;
     // Return a readable stream that provides the bytes
     // between offsets "start" and "end" inclusive
   },
 };
 
 const video = document.createElement("video");
-const videostream = new VideoStream(exampleFile, video);
 
 video.addEventListener("error", () => {
   // listen for errors on the video/audio element directly
