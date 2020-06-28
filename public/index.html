@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video</title>
-  </head>
-  <body>
-    <div id="video"></div>
 
-    <script id="video-template" type="text/html">
-      <video id="video" src="http://{{url}}:4000/video" controls></video>
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
-    <script src="./js/app.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video</title>
+  <style>
+    video {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="video"></div>
+
+  <script id="video-template" type="text/html">
+    <video id="video" src="http://{{url}}:4000/video" controls></video>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
 </html>
